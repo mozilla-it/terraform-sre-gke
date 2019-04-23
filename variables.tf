@@ -10,9 +10,5 @@ variable "region" {
   default = "us-west1"
 }
 
-variable "creds-file" {
-  description = "creds file downloaded from Google"
-}
-
 variable "ssh_username" {}
 variable "ssh_password" {}
