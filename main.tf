@@ -5,7 +5,7 @@ locals {
 resource "google_container_cluster" "gcp_kubernetes" {
   provider                 = "google-beta"
   name                     = "${var.cluster_name}"
-  location                 = "us-west1-a"
+  location                 = "${locals.location}"
   project                  = "${var.project_id}"
   initial_node_count       = 1
   min_master_version       = "1.12"
@@ -40,7 +40,7 @@ resource "google_container_cluster" "gcp_kubernetes" {
 resource "google_container_node_pool" "np_kubernetes" {
   provider           = "google-beta"
   name               = "${var.cluster_name}-node-pool-0"
-  location           = "${var.location}"
+  location           = "${locals.location}"
   project            = "${var.project_id}"
   initial_node_count = 1
 
