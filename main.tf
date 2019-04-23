@@ -54,7 +54,7 @@ resource "google_container_node_pool" "np_kubernetes" {
       "https://www.googleapis.com/auth/monitoring",
     ]
 
-    tags = ["afrank"]
+    tags = ["Terraform"]
   }
 
   autoscaling {
