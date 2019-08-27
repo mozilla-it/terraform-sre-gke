@@ -11,11 +11,6 @@ resource "google_container_cluster" "gcp_kubernetes" {
   min_master_version       = "1.12"
   remove_default_node_pool = true
 
-  master_auth {
-    username = "${var.ssh_username}"
-    password = "${var.ssh_password}"
-  }
-
   cluster_autoscaling {
     enabled = true
 

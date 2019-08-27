@@ -9,6 +9,3 @@ variable "cluster_name" {
 variable "region" {
   default = "us-west1"
 }
-
-variable "ssh_username" {}
-variable "ssh_password" {}
